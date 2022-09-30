@@ -5,6 +5,7 @@ import { Initial } from "./page/initial/initial";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 export function App() {
+  // APENAS UM TESTE
   return (
     <BrowserRouter>
       <Routes>
