@@ -1,0 +1,66 @@
+.card-tasks {
+  width: 100%;
+  border-bottom: 1px solid #777;
+}
+
+.body-card {
+  width: 100%;
+  padding: 0.5rem;
+
+  display: flex;
+  justify-content: space-around;
+  transition: all 0.3s;
+}
+
+.body-card:hover {
+  background-color: #292929;
+}
+
+.info-input-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.info-section {
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.input-checkbox {
+  cursor: pointer;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  outline: none;
+  border: 1px solid #f66b0e;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-checkbox::before {
+  content: "";
+  position: absolute;
+  height: 12px;
+  width: 5px;
+  border-right: 2px solid #0f0;
+  border-bottom: 2px solid #0f0;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.input-checkbox:checked:before {
+  opacity: 1;
+}
+
+.info-text {
+  color: #fff;
+  font-size: 2rem;
+}

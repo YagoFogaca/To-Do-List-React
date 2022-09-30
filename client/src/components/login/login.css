@@ -1,0 +1,50 @@
+.form-initial {
+  width: 100%;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+}
+
+.form-initial label {
+  font-size: 2.8rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.form-initial input {
+  width: 100%;
+  padding: 0.9rem 0.8rem;
+  font-size: 1.7rem;
+  border-radius: 2px;
+  border: 1px solid #000;
+}
+
+.form-initial input:focus-visible {
+  outline: 1px solid #000;
+}
+
+.btn-login {
+  width: 35%;
+  font-size: 1.6rem;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background-color: transparent;
+  padding: 1rem 0.8rem;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.5s;
+  background-color: #55ff55;
+}
+
+#section-btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn-login:hover {
+  box-shadow: 0px 0px 8px 0px #000000;
+}

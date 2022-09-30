@@ -1,0 +1,25 @@
+#section-initial {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#card-forms {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 40%;
+  min-height: 350px;
+  background-color: #323232;
+  padding: 1.5rem;
+  border-radius: 5px;
+  border: 1px solid #f66b0e;
+}
+
+.card-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}

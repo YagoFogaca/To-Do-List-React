@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel&display=swap");
+
+.header-modalTasks {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.header-modalTasks h2 {
+  font-size: 3.4rem;
+  color: #fff;
+  font-family: "Cinzel", serif;
+}
+
+.btn-hover {
+  transition: "all 0.5s";
+}
+
+.btn-hover:hover {
+  box-shadow: 0px 0px 8px 0px #000000;
+}
+
+.header-btns {
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.delete-day {
+  background-color: transparent;
+  border: none;
+  color: #f00;
+  cursor: pointer;
+}
+
+.form-task {
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.form-task input {
+  border-bottom: none;
+  border-width: 2px;
+  border-style: none;
+  border-radius: 5px;
+  padding: 1rem 0.8rem;
+  font-size: 1.6rem;
+  text-align: center;
+  font-weight: 600;
+  align-self: baseline;
+  border-color: rgb(0, 0, 0);
+}
+
+.form-task input:focus-visible {
+  outline: #f66b0e auto 1px;
+}
+
+.input-hour {
+  width: 15%;
+  border: 1px solid;
+}
+
+.input-task {
+  width: 55%;
+  border: 1px solid;
+}

@@ -1,0 +1,37 @@
+#nav-bar {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #323232;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+#figure-logo {
+  display: flex;
+  justify-content: center;
+}
+
+#img-logo {
+  width: 100px;
+}
+
+#list-options-menu {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+
+.btn-add {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-add path {
+  stroke: #0f0;
+}

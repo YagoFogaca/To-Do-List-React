@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel&display=swap");
+
+.main {
+  height: 100%;
+  padding: 2rem;
+  display: flex;
+  gap: 2rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-around;
+}
