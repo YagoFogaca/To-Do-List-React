@@ -54,16 +54,8 @@ export function ModalTasks(props) {
     <>
       <div className="header-modalTasks">
         <h2>{props.day_week}</h2>
-        {/* 
-        ** Button for selecting all the tasks of the day. Implementation in the next version  **
-        <div className="header-btns">
-          <button className="delete-day" type="submit">
-            <MdDeleteForever size={36} className="btn-hover" />
-          </button>
-        </div> */}
       </div>
       <GrClose
-        className="btn-hover"
         size={36}
         style={{
           position: "absolute",

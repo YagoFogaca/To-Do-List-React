@@ -2,10 +2,6 @@ p {
   font-size: 1.9rem;
 }
 
-.authorizedLogin {
-  color: #0f0;
-}
-
 .loginDenied {
   color: #f00;
 }
