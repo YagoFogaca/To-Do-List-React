@@ -1,10 +1,10 @@
-import { TasksSection } from "../../components/body/body";
+import { TasksSection } from "../../components/tasksSection/tasksSection";
 import "./home.css";
 
 export function Home() {
   return (
-    <main className="main">
+    <>
       <TasksSection />
-    </main>
+    </>
   );
 }

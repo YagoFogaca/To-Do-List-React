@@ -5,7 +5,7 @@ import { ModalTasks } from "../modal-tasks/modalTasks";
 import { CardTask } from "../card-task/card-task";
 import { Header } from "../menu/menu";
 
-import "./body.css";
+import "./tasksSection.css";
 // criar um arquivo customStyles para não ficar com o código tão sujo
 const customStyles = {
   content: {
@@ -55,12 +55,14 @@ export function TasksSection() {
   return (
     <>
       <Header api={api} />
-      {day_week.map((item, index) => {
-        return <CardTask day_week={item} tasks={task} key={index} taskModal={setTaskModal} modal={setModalOpen} />;
-      })}
-      <Modal isOpen={modalIsOpen} onRequestClose={setModalOpen} style={customStyles}>
-        <ModalTasks day_week={taskModal} api={api} tasks={task} modal={setModalOpen} />
-      </Modal>
+      <main className="main">
+        {day_week.map((item, index) => {
+          return <CardTask day_week={item} tasks={task} key={index} taskModal={setTaskModal} modal={setModalOpen} />;
+        })}
+        <Modal isOpen={modalIsOpen} onRequestClose={setModalOpen} style={customStyles}>
+          <ModalTasks day_week={taskModal} api={api} tasks={task} modal={setModalOpen} />
+        </Modal>
+      </main>
     </>
   );
 }
