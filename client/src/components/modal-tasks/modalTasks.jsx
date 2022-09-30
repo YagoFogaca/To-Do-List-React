@@ -34,14 +34,13 @@ export function ModalTasks(props) {
   }
 
   async function updateTaskApi(task, index) {
-    console.log(await TaskAPI.updateTask(task));
+    await TaskAPI.updateTask(task);
     setModifyTask(!modifyTask);
     taskDay.splice(index, 1, task);
-    console.log(taskDay);
   }
 
   async function deleteTask(task, index) {
-    console.log(await TaskAPI.deleteTask(task.id));
+    await TaskAPI.deleteTask(task.id);
     setModifyTask(!modifyTask);
     taskDay.splice(index, 1);
   }
@@ -75,7 +74,7 @@ export function ModalTasks(props) {
               updateTask(task, index, event);
             }}
           >
-            <input name="hour" className="input-hour" type="text" defaultValue={task.hour} />
+            <input name="hour" className="input-hour" type="time" defaultValue={task.hour} />
             <input name="task" className="input-task" type="text" defaultValue={task.task} />
             <ButtonSubmit text={"Editar"} size={"10%"} color={"#55ff55"} />
             <ButtonOnclick
