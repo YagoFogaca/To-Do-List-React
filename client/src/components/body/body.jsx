@@ -31,7 +31,7 @@ const customStyles = {
 
 Modal.setAppElement("#root");
 
-export function Body() {
+export function TasksSection() {
   const day_week = ["Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado", "Domingo"];
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [task, setTask] = useState([]);
@@ -55,14 +55,12 @@ export function Body() {
   return (
     <>
       <Header api={api} />
-      <main className="main">
-        {day_week.map((item, index) => {
-          return <CardTask day_week={item} tasks={task} key={index} taskModal={setTaskModal} modal={setModalOpen} />;
-        })}
-        <Modal isOpen={modalIsOpen} onRequestClose={setModalOpen} style={customStyles}>
-          <ModalTasks day_week={taskModal} api={api} tasks={task} modal={setModalOpen} />
-        </Modal>
-      </main>
+      {day_week.map((item, index) => {
+        return <CardTask day_week={item} tasks={task} key={index} taskModal={setTaskModal} modal={setModalOpen} />;
+      })}
+      <Modal isOpen={modalIsOpen} onRequestClose={setModalOpen} style={customStyles}>
+        <ModalTasks day_week={taskModal} api={api} tasks={task} modal={setModalOpen} />
+      </Modal>
     </>
   );
 }
