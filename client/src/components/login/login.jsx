@@ -32,9 +32,9 @@ export function FormLogin({ functionBtn }) {
       <form className="form-initial" onSubmit={loginInputs}>
         {login ? <FormMessage message={"Email ou senha incorreto"} nameClass={"loginDenied"} /> : <></>}
         <label htmlFor="email">Email:</label>
-        <input id="email" type="email" name="email" placeholder="teste@gmail.com" />
+        <input required id="email" type="email" name="email" placeholder="teste@gmail.com" />
         <label htmlFor="password">Senha:</label>
-        <input id="password" type="password" name="password" placeholder="sua senha..." />
+        <input required id="password" type="password" name="password" placeholder="sua senha..." />
         <div id="section-btn">
           <ButtonSubmit text={"Login"} size={"30%"} color={"#55ff55"} />
           <ButtonOnclick functionBtn={functionBtn} text={"Cadastro"} size={"30%"} color={"#f66b0e"} />

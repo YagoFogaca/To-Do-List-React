@@ -74,8 +74,8 @@ export function ModalTasks(props) {
               updateTask(task, index, event);
             }}
           >
-            <input name="hour" className="input-hour" type="time" defaultValue={task.hour} />
-            <input name="task" className="input-task" type="text" defaultValue={task.task} />
+            <input required name="hour" className="input-hour" type="time" defaultValue={task.hour} />
+            <input required name="task" className="input-task" type="text" defaultValue={task.task} />
             <ButtonSubmit text={"Editar"} size={"10%"} color={"#55ff55"} />
             <ButtonOnclick
               text={"Deletar"}

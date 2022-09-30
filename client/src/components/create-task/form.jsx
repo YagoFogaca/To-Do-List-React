@@ -48,9 +48,9 @@ export function FormCreate({ api, hendleModal }) {
           <option value="Domingo">Domingo</option>
         </select>
         <label>Hora:</label>
-        <input type="time" name="hour" className="input-hour" />
+        <input required type="time" name="hour" className="input-hour" />
         <label>Tarefa</label>
-        <input type="text" name="task" className="input-task" />
+        <input required type="text" name="task" className="input-task" />
         <section className="btn-section">
           <ButtonSubmit text={"Criar"} size={"35%"} color={"#55ff55"} />
           <ButtonSubmit type={"reset"} text={"Limpar"} size={"35%"} color={"#f00"} />

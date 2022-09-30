@@ -30,11 +30,11 @@ export function FormCreate({ formChange }) {
       </figure>
 
       <label htmlFor="name">Nome:</label>
-      <input id="name" name="name" type="text" placeholder="Seu nome..." />
+      <input required id="name" name="name" type="text" placeholder="Seu nome..." />
       <label htmlFor="email">Email:</label>
-      <input id="email" name="email" type="email" placeholder="Seu email..." />
+      <input required id="email" name="email" type="email" placeholder="Seu email..." />
       <label htmlFor="password">Senha:</label>
-      <input id="password" type="password" placeholder="shhhh..." />
+      <input required id="password" type="password" placeholder="shhhh..." />
       <label>Image:</label>
       <select
         className="select-avatar"
