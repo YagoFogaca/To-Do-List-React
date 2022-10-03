@@ -5,3 +5,14 @@ p {
 .loginDenied {
   color: #f00;
 }
+
+.createUser {
+  font-size: 1.6rem;
+  color: #f53f3f;
+}
+
+@media (max-width: 768px) {
+  .createUser {
+    font-size: 1.4rem;
+  }
+}

@@ -14,6 +14,12 @@
   border-radius: 100%;
 }
 
+.label-form-create-user {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
 .select-avatar {
   width: 100%;
   padding: 0.9rem 0.8rem;
@@ -31,5 +37,10 @@
 @media (max-width: 425px) {
   .img-avatar {
     width: 75px;
+  }
+  .label-form-create-user {
+    gap: 0.3rem;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }

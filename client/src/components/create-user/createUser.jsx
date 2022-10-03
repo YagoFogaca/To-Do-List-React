@@ -2,10 +2,14 @@ import { useState } from "react";
 import { ButtonOnclick } from "../btn/btn-onClick/btn-onClick";
 import { ButtonSubmit } from "../btn/btn-submit/btn-submit";
 import { UserApi } from "../../utils/api/userApi";
+import { FormMessage } from "../formMessage/formMessage";
 import "./createUser.css";
 
 export function FormCreate({ formChange }) {
   const [avatar, setAvatar] = useState("./img/user-picture/7.png");
+  const [formMessageName, setFormMessageName] = useState(false);
+  const [formMessagePsw, setFormMessagePsw] = useState(false);
+  const [badRegistration, setBadRegistration] = useState(false);
 
   async function createInput(event) {
     try {
@@ -19,7 +23,7 @@ export function FormCreate({ formChange }) {
       await UserApi.createUser(user);
       formChange();
     } catch (e) {
-      console.log(e);
+      setBadRegistration(true);
     }
   }
 
@@ -28,13 +32,48 @@ export function FormCreate({ formChange }) {
       <figure className="figure-avatar">
         <img className="img-avatar" src={avatar} alt="avatar" />
       </figure>
-
-      <label htmlFor="name">Nome:</label>
-      <input required id="name" name="name" type="text" placeholder="Seu nome..." />
+      {badRegistration ? <FormMessage message={"Email já foi registrado"} nameClass={"loginDenied"} /> : <></>}
+      <div>
+        <label htmlFor="name">Nome:</label>
+        {formMessageName ? (
+          <FormMessage message={"Precisa ser maior que 3 caracter"} nameClass={"createUser"} />
+        ) : (
+          <></>
+        )}
+      </div>
+      <input
+        required
+        id="name"
+        name="name"
+        type="text"
+        placeholder="Seu nome..."
+        onChange={(event) => {
+          if (event.target.value.length <= 3) {
+            setFormMessageName(true);
+          } else {
+            setFormMessageName(false);
+          }
+        }}
+      />
       <label htmlFor="email">Email:</label>
       <input required id="email" name="email" type="email" placeholder="Seu email..." />
-      <label htmlFor="password">Senha:</label>
-      <input required id="password" type="password" placeholder="shhhh..." />
+      <div className="label-form-create-user">
+        <label htmlFor="password">Senha:</label>
+        {formMessagePsw ? <FormMessage message={"Precisa ser maior que 6 caracter"} nameClass={"createUser"} /> : <></>}
+      </div>
+      <input
+        required
+        id="password"
+        type="password"
+        placeholder="shhhh..."
+        onChange={(event) => {
+          if (event.target.value.length <= 6) {
+            setFormMessagePsw(true);
+          } else {
+            setFormMessagePsw(false);
+          }
+        }}
+      />
       <label>Image:</label>
       <select
         className="select-avatar"
