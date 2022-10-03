@@ -15,9 +15,13 @@
 
 .form-task {
   width: 75%;
+  min-width: 210px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  gap: 1rem;
 }
 
 .form-task input {
@@ -45,4 +49,16 @@
 .input-task {
   width: 55%;
   border: 1px solid;
+}
+
+@media (max-width: 768px) {
+  .input-hour {
+    width: auto;
+  }
+  .input-task {
+    width: 100%;
+  }
+  /* .form-task button.btn-global {
+    width: 30%;
+  } */
 }
