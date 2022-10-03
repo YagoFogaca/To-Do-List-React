@@ -19,7 +19,7 @@ ReactModal__Content--after-open {
   align-items: center;
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 1024px) {
   .ReactModal__Content,
   ReactModal__Content--after-open {
     justify-content: flex-start;
