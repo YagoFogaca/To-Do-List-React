@@ -52,7 +52,7 @@ export function FormCreate({ formChange }) {
         <option value="./img/user-picture/7.png">Avatar - 7</option>
       </select>
       <div id="btn-section">
-        <ButtonSubmit text={"Registrar-se"} size={"30%"} color={"#55ff55"} />
+        <ButtonSubmit text={"Registar"} size={"30%"} color={"#55ff55"} />
         <ButtonOnclick functionBtn={formChange} text={"Login"} size={"30%"} color={"#f66b0e"} />
       </div>
     </form>

@@ -27,3 +27,9 @@
   padding: 0.9rem 0.8rem;
   font-size: 1.7rem;
 }
+
+@media (min-width: 425px) {
+  .img-avatar {
+    width: 75px;
+  }
+}

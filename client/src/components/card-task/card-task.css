@@ -1,5 +1,6 @@
 .section-card {
   width: 40%;
+  min-width: 260px;
   padding: 1rem;
 
   display: flex;

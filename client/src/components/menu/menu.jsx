@@ -16,6 +16,7 @@ const customStyles = {
     backgroundColor: "#323232",
     display: "flex",
     width: "40%",
+    minWidth: "250px",
     height: "100%",
     flexDirection: "column",
     justifyContent: "space-evenly",
