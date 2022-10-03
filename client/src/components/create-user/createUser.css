@@ -28,7 +28,7 @@
   font-size: 1.7rem;
 }
 
-@media (min-width: 425px) {
+@media (max-width: 425px) {
   .img-avatar {
     width: 75px;
   }
