@@ -14,9 +14,3 @@
 .btn-global:hover {
   box-shadow: 0px 0px 8px 0px #000000;
 }
-
-@media (max-width: 768px) {
-  button.btn-global {
-    width: 30%;
-  }
-}
